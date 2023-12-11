@@ -3,10 +3,14 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/home', (req, res) => res.send('Vista del HOME'));
-router.get('/contact', (req, res) => res.send('Vista de CONTACTO'));
-router.get('/about', (req, res) => res.send('Vista de NOSOTROS'));
-router.get('/faqs', (req, res) => res.send('Vista de PREGUNTAS FRECUENTES'));
+// Importamos el controlador main.controller.js y agregamos ruta al router.get
+
+const controller = requiere('../controllers/main.controller');
+
+router.get('/home', controller.home);
+router.get('/contact', controller.contact);
+router.get('/about', controller.about);
+router.get('/faqs', controller.faqs);
 
 
 
