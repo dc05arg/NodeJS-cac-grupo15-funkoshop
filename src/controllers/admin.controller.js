@@ -7,4 +7,4 @@ const edit = (req, res) => res.send('Vista para EDITAR un ITEM SELECCIONADO');
 const modify = (req, res) => res.send('Ruta y vista para MODIFICAR PRODUCTO del EDIT');
 const erase = (req, res) => res.send('Ruta y vista para ELIMINAR un ITEM SELECCIONADO');
 
-module.export = { admin, createItem, addItem, edit, modify, erase };
+module.exports = { admin, createItem, addItem, edit, modify, erase };
