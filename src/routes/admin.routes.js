@@ -6,7 +6,7 @@ const router = express.Router();
 
 // Importamos el controlador main.controller.js y agregamos ruta al router.get
 
-const controller = requiere('../controllers/admin.controller');
+const controller = require('../controllers/admin.controller');
 
 router.get('/', controller.admin);
 router.get('/create', controller.createItem);
