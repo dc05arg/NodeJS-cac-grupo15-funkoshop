@@ -3,12 +3,15 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => res.send('Vista del SHOP'));
-router.get('/item/:id', (req, res) => res.send('Vista del ITEM SELECCIONADO'));
-router.post('/item/:id/add', (req, res) => res.send('Ruta para AGREGAR un nuevo ITEM'));
-router.get('/cart', (req, res) => res.send('Vista del CARRITO'));
-router.post('/cart', (req, res) => res.send('Ruta para AGREGAR ITEM al CARRITO'));
+// Importamos el controlador shop.controller.js y agregamos ruta al router.get, post, etc
 
+const controller = require('../controllers/shop.controller');
+
+router.get('/', controller.shop);
+router.get('/item/:id', controller.shopItem);
+router.post('/item/:id/add', controller.addShopItem);
+router.get('/cart', controller.cart);
+router.post('/cart', controller.addCart);
 
 
 // Exportación
