@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 
-// Importamos el controlador main.controller.js y agregamos ruta al router.get
+// Importamos el controlador admin.controller.js y agregamos ruta al router.get
 
 const controller = require('../controllers/admin.controller');
 

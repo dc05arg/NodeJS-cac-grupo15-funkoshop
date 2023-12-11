@@ -3,11 +3,15 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/login', (req, res) => res.send('Vista del LOGIN'));
-router.post('/login', (req, res) => res.send('Ruta de validación del LOGIN'));
-router.get('/register', (req, res) => res.send('Vista del REGISTRO'));
-router.post('/register', (req, res) => res.send('Ruta de CREACIÓN de un NUEVO USUARIO'));
-router.get('/logout', (req, res) => res.send('Ruta que DESLOGUEA / CIERRA sesión USUARIO'))
+// Importamos el controlador auth.controller.js y agregamos ruta al router.get, post, etc
+
+const controller = require('../controllers/auth.controller');
+
+router.get('/login', controller.logIn);
+router.post('/login', controller.validationLogin);
+router.get('/register', controller.record);
+router.post('/register', controller.newUser);
+router.get('/logout', controller.logOut);
 
 // Exportación
 module.exports = router;
