@@ -1,0 +1,30 @@
+{
+  "name": "colaborador-diego",
+  "version": "1.0.0",
+  "description": "* Proyecto página web de Funko's. Front-end y Back-End Cac 4 2023.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dc05arg/NodeJS-cac-grupo15-funkoshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dc05arg/NodeJS-cac-grupo15-funkoshop/issues"
+  },
+  "homepage": "https://github.com/dc05arg/NodeJS-cac-grupo15-funkoshop#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
