@@ -18,14 +18,19 @@ const authRoutes = require('./src/routes/auth.routes');
 const shopRoutes = require('./src/routes/shop.routes');
 // --------------
 
-
+// Error 404
+app.use((req, res, next) => {
+  res.status(404).send("La página no existe");
+});
+// --------------
 
 const PORT = 3008;
 
 app.set('view engine', 'ejs');
+// La siguiente app.set es para indicarle al motor ejs que las vistas van a estar en la carpeta esta
 app.set('views', './src/views');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 
 // Configuramos las routes importadas para utilizarlos con middleware
