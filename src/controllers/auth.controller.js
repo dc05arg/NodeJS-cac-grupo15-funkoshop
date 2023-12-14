@@ -5,4 +5,4 @@ const newUser = (req, res) => res.send('Ruta de CREACIÓN de un NUEVO USUARIO');
 const logOut = (req, res) => res.send('Ruta que DESLOGUEA / CIERRA sesión USUARIO');
 
 
-modules.exports = { logIn, validationLogin, record, newUser, logOut };
+module.exports = { logIn, validationLogin, record, newUser, logOut };
