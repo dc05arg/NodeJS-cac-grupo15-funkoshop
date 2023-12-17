@@ -1,0 +1,240 @@
+/* Se importan Fuentes de Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+/* Se crean Variables */
+
+:root {
+  /* colors */
+  --primary-solid: #ff3333;
+  --primary-90: rgba(255, 51, 51, 0.9);
+  --primary-50: rgba(255, 51, 51, 0.5);
+  --primary-30: rgba(255, 51, 51, 0.3);
+
+  --secondary-solid: #1d84b5;
+  --secondary_90: rgba(29, 132, 181, 0.9);
+  --secondary_60: rgba(29, 132, 181, 0.6);
+  --secondary_30: rgba(29, 132, 181, 0.3);
+
+  --dark-solid: #1f1f1f;
+  --dark_90: rgba(31, 31, 31, 0.9);
+  --dark_60: rgba(31, 31, 31, 0.6);
+  --dark_30: rgba(31, 31, 31, 0.3);
+
+  /* Grey para background */
+  --grey-solid: #30343f;
+  --grey_90: rgba(48, 52, 63, 0.9);
+  --grey_60: rgba(48, 52, 63, 0.6);
+  --grey_30: rgba(48, 52, 63, 0.3);
+
+  /* White para background */
+  --white-solid: #fafaff;
+
+  /* Pure White para Fonts */
+  --white-font: #ffffff;
+
+  /* Pink */
+  --pink-solid: #ff1654;
+  --pink-90: rgba(255, 22, 84, 0.9);
+  --pink-60: rgba(255, 22, 84, 0.6);
+  --pink-30: rgba(255, 22, 84, 0.3);
+
+  /* Typographies */
+  --principal-font: "Inter", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  /* Font-sizes */
+  --font-46: 4.6em;
+  --font-38: 3.8em;
+  --font-30: 3em;
+  --font-24: 2.4em;
+  --font-20: 2em;
+  --font-18: 1.8em;
+  --font-16: 1.6em;
+  --font-14: 1.4em;
+
+  /* Spacings */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2rem;
+  --spacing-18: 1.8rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+}
+
+/* -------------------------------- */
+
+/* MAIN */
+
+.main {
+  /* coloco el div principal al lado del aside */
+  /* display: flex; */
+  /* o se puede usar grid */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: var(--spacing-36) 0;
+}
+
+.main__padding {
+  padding: 0 1.4rem;
+}
+
+/* -- Aside --*/
+
+.main-aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-aside > div > h2 {
+  font-size: var(--font-24);
+  font-weight: 500;
+  margin-bottom: var(--spacing-8);
+}
+
+.aside-search,
+.aside-order,
+.aside-price {
+  margin-bottom: var(--spacing-18);
+}
+
+.aside-search__input,
+.aside-order__form-select {
+  width: 100%;
+  max-width: 20rem;
+  height: 3.5rem;
+}
+
+.aside-price__label {
+  font-size: var(--font-16);
+  font-weight: 500;
+}
+
+.aside-price__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20rem;
+}
+
+.aside-price__min-max {
+  width: 4.8rem;
+  height: 2.5rem;
+}
+
+.aside-filter__label {
+  font-size: var(--font-18);
+  font-weight: 500;
+}
+
+.aside-filter__form > input {
+  margin-left: var(--spacing-16);
+}
+
+input,
+select {
+  border: 0.2rem solid var(--grey_60);
+  border-radius: 0.4rem;
+}
+
+/* -- Main Funko Group -- */
+
+.main-funko-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* row-gap: var(--spacing-16); */
+  /* column-gap: var(--spacing-12); */
+}
+
+.main-funko-item {
+  min-width: 10%;
+}
+
+/* -------------------------------- */
+
+/* CHEVRON and PAGES */
+
+.main-funko-chevron__nav-bar__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-68);
+  gap: var(--spacing-8);
+}
+
+.main-funko-chevron__nav-bar__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0.5rem 0.4rem;
+  font-size: var(--font-16);
+  border: 0.1rem solid var(--grey_30);
+  color: var(--dark-solid);
+  font-weight: 700;
+}
+
+.main-funko-chevron__nav-bar__buttons:hover {
+  border: 0.1rem solid var(--primary-90);
+  color: var(--primary-solid);
+}
+
+.iconify__chevron {
+  font-size: var(--font-16);
+  color: var(--dark-solid);
+  font-weight: 700;
+}
+
+.iconify__chevron:hover {
+  color: var(--primary-solid);
+}
+
+/* -------------------------------- */
+
+/* MEDIA QUERY */
+
+/* Media screen celular */
+
+@media screen and (max-width: 1023px) {
+  .main__padding {
+    padding: 0 1.2rem;
+  }
+
+  .main {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main-aside {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .main-funko-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aside-search__input,
+  .aside-order__form-select {
+    width: 25rem;
+    height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .main__padding {
+    padding: 0 1.2rem;
+  }
+
+  .main-funko-group {
+    grid-template-columns: 1fr;
+  }
+}
