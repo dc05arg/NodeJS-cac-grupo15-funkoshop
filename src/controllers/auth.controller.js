@@ -1,8 +1,7 @@
-const logIn = (req, res) => res.send('Vista del LOGIN');
-const validationLogin = (req, res) => res.send('Ruta de validación del LOGIN');
-const record = (req, res) => res.send('Vista del REGISTRO');
-const newUser = (req, res) => res.send('Ruta de CREACIÓN de un NUEVO USUARIO');
-const logOut = (req, res) => res.send('Ruta que DESLOGUEA / CIERRA sesión USUARIO');
-
-
-module.exports = { logIn, validationLogin, record, newUser, logOut };
+module.exports = {
+  login: (req, res) => res.render('../views/auth/login.ejs', {title: 'INGRESAR'}),
+  doLogin: (req, res) => res.send('Esta es la ruta que valida los datos del LOGIN'),
+  register: (req, res) => res.render('../views/auth/register.ejs', {title: 'REGISTRO'}),
+  doRegister: (req, res) => res.send('Esta es la ruta que CREA un NUEVO USUARIO'),
+  logout: (req, res) => res.send('Esta ruta desloguea o cierra la sesión del usuario'),
+};

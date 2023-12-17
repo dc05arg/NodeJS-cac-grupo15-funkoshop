@@ -1,7 +1,7 @@
-const shop = (req, res) => res.send('Vista del SHOP');
-const shopItem = (req, res) => res.send('Vista del ITEM SELECCIONADO');
-const addShopItem = (req, res) => res.send('Ruta para AGREGAR un nuevo ITEM');
-const cart = (req, res) => res.send('Vista del CARRITO');
-const addCart = (req, res) => res.send('Ruta para AGREGAR ITEM al CARRITO');
-
-module.exports = { shop, shopItem, addShopItem, cart, addCart };
+module.exports = {
+  shop: (req, res) => res.render('../views/shop/shop.ejs', {title: 'SHOP'}),
+  item: (req, res) => res.render('../views/shop/item.ejs', {title: 'ITEM'}),
+  addItem: (req, res) => res.send('Ruta para AGREGAR un nuevo ITEM'),
+  cart: (req, res) => res.render('../views/shop/carrito.ejs', {title: 'CARRITO'}),
+  addToCart: (req, res) => res.send('Ruta para AGREGAR ITEM al CARRITO'),
+};

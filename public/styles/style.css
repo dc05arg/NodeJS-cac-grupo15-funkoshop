@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
-@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
 
 /* --------------------------------------------------------------------------- VARIABLES --------------------------------------------------------------------------- */
 
@@ -35,8 +35,8 @@
 
   /* -------------------- TYPOGRAPHY -------------------- */
 
-  --fuente-base: "Inter", sans-serif;
-  --fuente-alternativa: "Raleway", sans-serif;
+  --fuente-base: 'Inter', sans-serif;
+  --fuente-alternativa: 'Raleway', sans-serif;
 
   /* -------------------- SIZE -------------------- */
 
@@ -60,6 +60,7 @@
   --spacing-28: 2.8rem;
   --spacing-24: 2.4rem;
   --spacing-20: 2rem;
+  --spacing-18: 1.8rem;
   --spacing-16: 1.6rem;
   --spacing-14: 1.4rem;
   --spacing-12: 1.2rem;
@@ -2922,6 +2923,179 @@ add icon del header en caso de llegar a su máximo width. */
     /* background-color: var(--color-primario); */
     /* color: var(--color-fuente-claro); */
     padding: var(--spacing-10) var(--spacing-20);
+  }
+}
+
+/* --------------------------------------------------------------------------- SHOP --------------------------------------------------------------------------- */
+
+/* MAIN */
+
+.main {
+  /* coloco el div principal al lado del aside */
+  /* display: flex; */
+  /* o se puede usar grid */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: var(--spacing-36) 0;
+}
+
+.main__padding {
+  padding: 0 var(--spacing-14);
+}
+
+/* -- Aside --*/
+
+.main-aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-aside > div > h2 {
+  font-size: var(--large-size-24px);
+  font-weight: 500;
+  margin-bottom: var(--spacing-8);
+}
+
+.aside-search,
+.aside-order,
+.aside-price {
+  margin-bottom: var(--spacing-18);
+}
+
+.aside-search__input,
+.aside-order__form-select {
+  width: 100%;
+  max-width: 20rem;
+  height: 3.5rem;
+}
+
+.aside-price__label {
+  font-size: var(--small-size-16px);
+  font-weight: 500;
+}
+
+.aside-price__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20rem;
+}
+
+.aside-price__min-max {
+  width: 4.8rem;
+  height: 2.5rem;
+}
+
+.aside-filter__label {
+  font-size: var(--medium-size-18px);
+  font-weight: 500;
+}
+
+.aside-filter__form > input {
+  margin-left: var(--spacing-16);
+}
+
+input,
+select {
+  border: 0.2rem solid var(--color-fuente-gris);
+  border-radius: 0.4rem;
+}
+
+/* -- Main Funko Group -- */
+
+.main-funko-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* row-gap: var(--spacing-16); */
+  /* column-gap: var(--spacing-12); */
+}
+
+.main-funko-item {
+  min-width: 10%;
+}
+
+/* -------------------------------- */
+
+/* CHEVRON and PAGES */
+
+.main-funko-chevron__nav-bar__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-68);
+  gap: var(--spacing-8);
+}
+
+.main-funko-chevron__nav-bar__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0.5rem 0.4rem;
+  font-size: var(--small-size-16px);
+  border: 0.1rem solid var(--color-fuente-gris);
+  color: var(--color-oscuro);
+  font-weight: 700;
+}
+
+.main-funko-chevron__nav-bar__buttons:hover {
+  border: 0.1rem solid var(--color-primario-90);
+  color: var(--color-primario);
+}
+
+.iconify__chevron {
+  font-size: var(--small-size-16px);
+  color: var(--color-oscuro);
+  font-weight: 700;
+}
+
+.iconify__chevron:hover {
+  color: var(--color-primario);
+}
+
+/* -------------------------------- */
+
+/* MEDIA QUERY */
+
+/* Media screen celular */
+
+@media screen and (max-width: 1023px) {
+  .main__padding {
+    padding: 0 1.2rem;
+  }
+
+  .main {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main-aside {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .main-funko-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aside-search__input,
+  .aside-order__form-select {
+    width: 25rem;
+    height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .main__padding {
+    padding: 0 1.2rem;
+  }
+
+  .main-funko-group {
+    grid-template-columns: 1fr;
   }
 }
 

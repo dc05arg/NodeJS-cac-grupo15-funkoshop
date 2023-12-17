@@ -8,11 +8,10 @@ const router = express.Router();
 const controller = require('../controllers/shop.controller');
 
 router.get('/', controller.shop);
-router.get('/item/:id', controller.shopItem);
-router.post('/item/:id/add', controller.addShopItem);
+router.get('/item/:id', controller.item);
+router.post('/item/:id/add', controller.addItem);
 router.get('/cart', controller.cart);
-router.post('/cart', controller.addCart);
-
+router.post('/cart', controller.addToCart);
 
 // Exportación
 module.exports = router;
