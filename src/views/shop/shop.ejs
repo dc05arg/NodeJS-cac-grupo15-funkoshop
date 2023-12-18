@@ -49,7 +49,37 @@
 
         <!-- Funko Group Main -->
         <div class="main-funko">
-          <div class="main-funko-group"></div>
+          <div class="main-funko-group">
+              <% data.forEach(item => { %>
+              <div class="main-funko-item">
+                <article class="card-item">
+                  <a class="card-item__link" href="/shop/item/<%= item.product_id %>">
+                    <picture class="card-item__img">
+                      <span class="card-item__tag">NUEVO</span>
+                      <img
+                        class="card-item__img--front"
+                        src="<%= item.image_front %>"
+                        alt="<%= item.product_description %>"
+                      />
+                      <img
+                        class="card-item__img--back"
+                        src="<%= item.image_back %>"
+                        alt="<%= item.product_description %> BOX"
+                      />
+                    </picture>
+                    <div class="card-item__content">
+                      <p class="card-item__license"><%= item.licence_name %></p>
+                      <h3 class="card-item__name"><%= item.product_name %></h3>
+                      <p class="card-item__price"><%= item.price %></p>
+                      <p class="card-item__offer"><%= item.dues %> CUOTAS SIN INTERÉS</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            <% }) %>
+          </div>
+
+
           <!-- Chevron and Pages -->
           <div class="main-funko-chevron">
             <nav class="main-funko-chevron__nav-bar">
@@ -85,6 +115,5 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="/script/menu.js"></script>
-    <script src="/script/shop.js"></script>
   </body>
 </html>

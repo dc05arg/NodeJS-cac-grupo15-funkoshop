@@ -4,7 +4,7 @@
       <section class="create container">
         <h1 class="create__title">CREAR NUEVO ITEM</h1>
 
-        <form class="create__form" action="" method="post">
+        <form class="create__form" action="/admin/create" method="post" enctype="multipart/form-data">
           <div class="create__content">
             <label class="create__label" for="categoria">
               Categoría:
@@ -80,7 +80,7 @@
           <div class="create__content">
             <label class="create__label" for="imagenes">
               Imágenes:
-              <input class="create__image" type="file" name="imagenes" id="imagenes" />
+              <input class="create__image" type="file" name="imagenes" id="imagenes" multiple/>
             </label>
           </div>
 

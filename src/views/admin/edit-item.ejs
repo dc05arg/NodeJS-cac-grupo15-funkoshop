@@ -34,7 +34,7 @@
                 type="text"
                 name="nombre"
                 id="nombre"
-                placeholder="Kakashi Hatake Shippuden Saga"
+                value="<%= product.product_name %>"
               />
             </label>
           </div>
@@ -46,8 +46,7 @@
               id="descripcion"
               cols="50"
               rows="8"
-              placeholder="Descripción del producto"
-            ></textarea>
+            ><%= product.product_description %></textarea>
           </div>
 
           <div class="create__content">
@@ -58,7 +57,7 @@
                 type="text"
                 name="sku"
                 id="sku"
-                placeholder="SSK111AB001"
+                value="<%= product.sku %>"
               />
             </label>
 
@@ -69,7 +68,7 @@
                 type="number"
                 name="precio"
                 id="precio"
-                placeholder="$0.000,00"
+                value="<%= product.price %>"
               />
             </label>
 
@@ -80,7 +79,7 @@
                 type="number"
                 name="stock"
                 id="stock"
-                placeholder="0"
+                value="<%= product.stock %>"
               />
             </label>
           </div>
@@ -93,7 +92,7 @@
                 type="number"
                 name="descuento"
                 id="descuento"
-                placeholder="0%"
+                value="0%"
               />
             </label>
 
