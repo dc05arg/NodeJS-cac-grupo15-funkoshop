@@ -4,7 +4,7 @@
       <section class="account container">
         <h1 class="account__title">INGRESAR A MI CUENTA</h1>
 
-        <form class="account__form" action="" method="post">
+        <form class="account__form" action="/auth/login" method="post" enctype="application/x-www-form-urlencoded">
           <ul class="account__list">
             <li class="account__content">
               <label class="account__label" for="email">Email:</label>
@@ -30,7 +30,7 @@
           </ul>
 
           <div class="account__enter">
-            <input class="account__button" type="button" value="Ingresar" />
+            <input class="account__button" type="submit" value="Ingresar" />
 
             <div class="account__checkbox">
               <input
@@ -46,9 +46,9 @@
           </div>
         </form>
 
-        <a class="account__olvidar" href="">Olvidé mi contraseña</a>
+        <a class="account__olvidar" href="#">Olvidé mi contraseña</a>
 
-        <a class="account__olvidar" href="./register.html">
+        <a class="account__olvidar" href="/auth/register">
           ¿No tienes una cuenta? Regístrate
         </a>
       </section>

@@ -7,7 +7,7 @@
           Completa el formulario para ser parte del mundo de los Funkos
         </p>
 
-        <form class="account__form" action="" method="post">
+        <form class="account__form" action="/auth/register" method="post" enctype="application/x-www-form-urlencoded">
           <ul class="account__list">
             <li class="account__content">
               <label class="account__label" for="nombre">Nombre:</label>
@@ -68,7 +68,7 @@
           </ul>
 
           <div class="account__enter">
-            <input class="account__button" type="button" value="Registrar" />
+            <input class="account__button" type="submit" value="Registrar" />
 
             <div class="account__checkbox">
               <input
@@ -79,7 +79,7 @@
               />
               <label class="account__checkbox--label" for="terminos">
                 Acepto
-                <a class="account__link" href="">Términos y Condiciones</a>
+                <a class="account__link" href="#">Términos y Condiciones</a>
               </label>
             </div>
           </div>

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/dc05arg/NodeJS-cac-grupo15-funkoshop#readme",
   "dependencies": {
+    "cookie-session": "^2.0.0",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
