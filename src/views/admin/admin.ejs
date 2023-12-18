@@ -45,7 +45,9 @@
                     </a>
                   </td>
                   <td>
-                    <img class="productos__icon" src="/img/icons/delete_trash.svg" alt="Delete Icon" />
+                    <form action="/admin/delete/<%= product.product_id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
+                      <button class="productos__icon" type="submit"><img class="productos__icon" src="/img/icons/delete_trash.svg" alt="Delete Icon" /></>
+                    </form>
                   </td>
                 </tr>
               <% }) %>

@@ -4,7 +4,7 @@
       <section class="create container">
         <h1 class="create__title">EDITAR ITEM</h1>
 
-        <form class="create__form" action="/admin/edit/:<%= product.product_id %>" method="post" enctype="multipart/form-data">
+        <form class="create__form" action="/admin/edit/<%= product.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <div class="create__content">
             <label class="create__label" for="categoria">
               Categoría:
@@ -121,14 +121,31 @@
                 type="file"
                 name="imagenes"
                 id="imagenes"
+                multiple
               />
             </label>
           </div>
 
           <div class="create__content">
+            <div class="create__image--img">
+              <picture>
+                <img src="<%= product.image_front %>" alt="<%= product.product_description %>">
+              </picture>
+              <p class="create__image--side">Frente</p>
+            </div>
+
+            <div class="create__image--img">
+              <picture>
+                <img src="<%= product.image_back %>" alt="<%= product.product_description %>">
+              </picture>
+              <p class="create__image--side">Dorso</p>
+            </div>
+          </div>
+
+          <div class="create__content">
             <input
               class="create__button"
-              type="button"
+              type="submit"
               value="Modificar Producto"
             />
           </div>

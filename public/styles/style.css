@@ -2133,6 +2133,8 @@ add icon del header en caso de llegar a su máximo width. */
 .productos__icon {
   cursor: pointer;
   max-width: 2rem;
+  border: none;
+  background-color: transparent;
 }
 
 /* ---------------------------------------- Tablet Screen ---------------------------------------- */
@@ -2735,6 +2737,21 @@ add icon del header en caso de llegar a su máximo width. */
 
 .create__image {
   font-size: var(--normal-size-10px);
+  border: none;
+}
+
+.create__image--img {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.create__image--side {
+  border-top: 1px solid var(--color-primario);
+  padding-top: var(--spacing-4);
+  font-weight: 500;
+  font-size: var(--normal-size-10px);
+  text-align: center;
 }
 
 .create__button {
@@ -2744,6 +2761,7 @@ add icon del header en caso de llegar a su máximo width. */
   background-color: var(--color-primario);
   color: var(--color-fuente-claro);
   padding: var(--spacing-4) var(--spacing-8);
+  cursor: pointer;
 }
 
 /* ---------------------------------------- Tablet Screen ---------------------------------------- */
@@ -2824,6 +2842,20 @@ add icon del header en caso de llegar a su máximo width. */
   /* .create__image {
     font-size: var(--normal-size-10px);
   } */
+
+  .create__image--img {
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+  }
+  
+  .create__image--side {
+    border-top: 1px solid var(--color-primario);
+    padding-top: var(--spacing-4);
+    font-weight: 500;
+    font-size: var(--xsmall-size-14px);
+    text-align: center;
+  }
 
   .create__button {
     font-size: var(--xsmall-size-14px);
@@ -2914,6 +2946,20 @@ add icon del header en caso de llegar a su máximo width. */
 
   .create__image {
     font-size: 0.8em;
+  }
+
+  .create__image--img {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+  }
+  
+  .create__image--side {
+    border-top: 1px solid var(--color-primario);
+    padding-top: var(--spacing-4);
+    font-weight: 500;
+    font-size: var(--medium-size-20px);
+    text-align: center;
   }
 
   .create__button {

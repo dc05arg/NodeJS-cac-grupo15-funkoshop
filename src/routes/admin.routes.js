@@ -13,7 +13,7 @@ router.get('/', controller.admin);
 router.get('/create', controller.createView);
 router.post('/create', upload.array('imagenes', 2), controller.createItem);
 router.get('/edit/:id', controller.editView);
-router.put('/edit/:id', controller.editItem);
+router.put('/edit/:id', upload.array('imagenes', 2), controller.editItem);
 router.delete('/delete/:id', controller.deleteItem);
 
 // Exportación
