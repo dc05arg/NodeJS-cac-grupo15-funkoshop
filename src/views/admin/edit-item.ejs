@@ -34,6 +34,7 @@
                 name="nombre"
                 id="nombre"
                 value="<%= product.product_name %>"
+                required
               />
             </label>
           </div>
@@ -45,6 +46,7 @@
               id="descripcion"
               cols="50"
               rows="8"
+              required
             ><%= product.product_description %></textarea>
           </div>
 
@@ -57,6 +59,7 @@
                 name="sku"
                 id="sku"
                 value="<%= product.sku %>"
+                required
               />
             </label>
 
@@ -68,6 +71,7 @@
                 name="precio"
                 id="precio"
                 value="<%= product.price %>"
+                required
               />
             </label>
 
@@ -79,6 +83,7 @@
                 name="stock"
                 id="stock"
                 value="<%= product.stock %>"
+                required
               />
             </label>
           </div>
@@ -91,13 +96,14 @@
                 type="number"
                 name="descuento"
                 id="descuento"
-                value="0%"
+                value="<%= product.discount %>"
+                required
               />
             </label>
 
             <label class="create__label" for="cuotas">
               Cuotas:
-              <select class="create__select" name="cuotas" id="cuotas">
+              <select class="create__select" name="cuotas" id="cuotas" required>
                 <option value="tres-cuotas" selected>
                   3 Cuotas sin interés
                 </option>
