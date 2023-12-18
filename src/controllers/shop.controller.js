@@ -12,10 +12,12 @@ module.exports = {
   item: async (req, res) => {
     const { id } = req.params;
     const [item] = await getOne({product_id: id});
+    const data = await getAll();
     
     res.render('../views/shop/item.ejs', {
       title: 'ITEM',
-      item
+      item,
+      data
     });
   },
   addItem: (req, res) => res.send('Ruta para AGREGAR un nuevo ITEM'),
