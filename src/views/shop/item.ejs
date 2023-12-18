@@ -3,14 +3,12 @@
     <main class="item__page">
       <section class="item container">
         <picture class="item__img">
-          <img
-            src="<%= item.image_front %>"
-            alt="<%= item.product_description %>"
-          />
+          <img class="card-item__img--front" src="<%= item.image_front %>" alt="<%= item.product_description %>" />
+          <img class="card-item__img--back" src="<%= item.image_back %>" alt="<%= item.product_description %> BOX" />
         </picture>
 
         <article class="item__content">
-          <p class="item__license"><%= item.licence_id %></p>
+          <p class="item__license"><%= item.licence_name %></p>
           <h1 class="item__title"><%= item.product_name %></h1>
           <p class="item__description"><%= item.product_description %></p>
           <p class="item__price"><%= item.price %></p>
