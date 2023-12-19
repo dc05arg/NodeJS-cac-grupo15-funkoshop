@@ -38,7 +38,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(path.join(__dirname + "/public")));
 
 
 // Configuramos las routes importadas para utilizarlos con middleware
