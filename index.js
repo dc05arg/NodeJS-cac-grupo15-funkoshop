@@ -1,7 +1,7 @@
 // Creamos el servidor de archivos estáticos
 const express = require("express");
 
-// const path = require('path');
+const path = require('path');
 
 // Creamos una app
 const app = express();
@@ -26,7 +26,7 @@ const PORT = 3008;
 
 app.set("view engine", "ejs");
 // La siguiente app.set es para indicarle al motor ejs que las vistas van a estar en la carpeta esta
-app.set("views", "./src/views");
+app.set("views", path.join(__dirname, "./src/views"));
 
 app.use(initSession.initSession());
 app.use((req, res, next) => {
