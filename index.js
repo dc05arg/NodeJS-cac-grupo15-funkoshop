@@ -1,6 +1,8 @@
 // Creamos el servidor de archivos estáticos
 const express = require("express");
 
+// const path = require('path');
+
 // Creamos una app
 const app = express();
 
@@ -51,6 +53,6 @@ app.use((req, res, next) => {
 });
 // --------------
 
-app.listen(PORT, () =>
-  console.log(`Servidor corriendo en http://localhost:${PORT}`)
-);
+// app.listen(PORT, () =>
+//   console.log(`Servidor corriendo en http://localhost:${PORT}`)
+// );
