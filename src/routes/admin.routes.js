@@ -45,9 +45,9 @@ const isLogged = (req, res, next) => {
 
 router.get('/', isLogged, controller.admin);
 router.get('/create', isLogged, controller.createView);
-router.post('/create', isLogged, upload.array('imagenes', 2), createValidation, validateInput, controller.createItem);
+router.post('/create', isLogged, upload.fields([{ name: 'imgFront', maxCount: 1 }, { name: 'imgBack', maxCount: 1 }]), createValidation, validateInput, controller.createItem);
 router.get('/edit/:id', isLogged, controller.editView);
-router.put('/edit/:id', isLogged, upload.array('imagenes', 2), createValidation, validateInput, controller.editItem);
+router.put('/edit/:id', isLogged, upload.fields([{ name: 'imgFront', maxCount: 1 }, { name: 'imgBack', maxCount: 1 }]), createValidation, validateInput, controller.editItem);
 router.delete('/delete/:id', isLogged, controller.deleteItem);
 
 // Exportación

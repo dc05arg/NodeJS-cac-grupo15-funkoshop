@@ -20,8 +20,8 @@ module.exports = {
       discount: Number(req.body.descuento),
       sku: req.body.sku,
       dues: req.body.cuotas,
-      image_front: '/img/products/' + req.files[0].filename,
-      image_back: '/img/products/' + req.files[1].filename,
+      image_front: '/img/products/' + req.files.imgFront[0].filename,
+      image_back: '/img/products/' + req.files.imgBack[0].filename,
       category_id: Number(req.body.categoria),
       licence_id: Number(req.body.licencia)
     };
@@ -41,7 +41,7 @@ module.exports = {
   },
   editItem: async (req, res) => {
     const { id } = req.params;
-    const haveImages = req.files.length !== 0;
+    const haveImages = (Object.keys(req.files).length) !== 0;
 
     const product_DB = haveImages
       ? {
@@ -52,8 +52,8 @@ module.exports = {
         discount: Number(req.body.descuento),
         sku: req.body.sku,
         dues: req.body.cuotas,
-        image_front: '/img/products/' + req.files[0].filename,
-        image_back: '/img/products/' + req.files[1].filename,
+        image_front: '/img/products/' + req.files.imgFront[0].filename,
+        image_back: '/img/products/' + req.files.imgBack[0].filename,
         category_id: Number(req.body.categoria),
         licence_id: Number(req.body.licencia)
       }

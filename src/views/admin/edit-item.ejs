@@ -103,25 +103,26 @@
             <label class="create__label" for="cuotas">
               Cuotas:
               <select class="create__select" name="cuotas" id="cuotas" >
-                <option value="tres-cuotas" selected>
+                <option <%= product.dues == '3' ? 'selected' : '' %> value="3" selected>
                   3 Cuotas sin interés
                 </option>
-                <option value="seis-cuotas">6 Cuotas sin interés</option>
-                <option value="doce-cuotas">12 Cuotas sin interés</option>
+                <option <%= product.dues == '6' ? 'selected' : '' %> value="6">6 Cuotas sin interés</option>
+                <option <%= product.dues == '12' ? 'selected' : '' %> value="12">12 Cuotas sin interés</option>
               </select>
             </label>
           </div>
 
           <div class="create__content">
-            <label class="create__label" for="imagenes">
-              Imágenes:
-              <input
-                class="create__image"
-                type="file"
-                name="imagenes"
-                id="imagenes"
-                multiple
-              />
+            <label class="create__label" for="imgFront">
+              Imagen Frente:
+              <input class="create__image" type="file" name="imgFront" id="imagenes" />
+            </label>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="imgBack">
+              Imagen Dorso:
+              <input class="create__image" type="file" name="imgBack" id="imagenes" />
             </label>
           </div>
 
